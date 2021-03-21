@@ -10,7 +10,7 @@ class LoadingScreen extends StatefulWidget {
 
 class _LoadingScreenState extends State<LoadingScreen> {
   Future<void> getLocationData() async {
-    var weatherData = WeatherModel().getLocationWeather();
+    var weatherData = await WeatherModel().getLocationWeather();
     Navigator.push(
         context,
         MaterialPageRoute(
@@ -22,6 +22,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   @override
   void initState() {
+    super.initState();
     getLocationData();
   }
 
