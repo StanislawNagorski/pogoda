@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pogoda/screens/city_screen.dart';
 import 'package:pogoda/services/weather.dart';
 import 'package:pogoda/utilities/constants.dart';
 
@@ -75,7 +76,13 @@ class _LocationScreenState extends State<LocationScreen> {
                     ),
                   ),
                   FlatButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CityScreen(),
+                          ));
+                    },
                     child: Icon(
                       Icons.location_city,
                       size: 50.0,
